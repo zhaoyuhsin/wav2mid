@@ -69,5 +69,5 @@ def transfer(audio_path, save_path):
     data = getdata(audio_path)
     device='cpu'
     model = torch.load("model.pt", map_location=device).eval()
-    print(eva(data, model,save_path=save_path))
+    return(eva(data, model,save_path=save_path))
 transfer("blues.mp3", "output/")
