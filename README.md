@@ -18,6 +18,11 @@ ffmpeg -y -loglevel fatal -i a.wav -ac 1 -ar 16000 a.flac
 python3 evaluate.py model.pt --save-path output/ 
 ```
 * The result a.mid is placed in output/
+### Convert WAV or MP3 file into MIDI By interface(Update)
+```py
+def transfer(audio_path, save_path):
+    return midi_path
+```
 
 
 
