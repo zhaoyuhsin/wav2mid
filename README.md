@@ -1,6 +1,6 @@
 ## Instructions
 
-Music Transport by deep learing.
+Music Transcription by deep learing.
 ### Convert WAV or MP3 file into MIDI By interface(Update)
 * support map & wav format file.
 * the transfer interface is located in wav2mid.py.
