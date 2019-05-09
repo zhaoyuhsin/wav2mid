@@ -1,24 +1,13 @@
-# PyTorch Implementation of Onsets and Frames
-
-This is a [PyTorch](https://pytorch.org/) implementation of Google's [Onsets and Frames](https://magenta.tensorflow.org/onsets-frames) model, using the [Maestro dataset](https://magenta.tensorflow.org/datasets/maestro) for training and the Disklavier portion of the [MAPS database](http://www.tsi.telecom-paristech.fr/aao/en/2010/07/08/maps-database-a-piano-database-for-multipitch-estimation-and-automatic-transcription-of-music/) for testing.
-
 ## Instructions
 
-This project is quite resource-intensive; 32 GB or larger system memory and 8 GB or larger GPU memory is recommended. 
-
-### Convert WAV file into MIDI
-* Convert wav format file into flac by ffmpeg
-```bash
-ffmpeg -y -loglevel fatal -i a.wav -ac 1 -ar 16000 a.flac
-```
-* Put the flac file into data/MAPS/flac(for example a.flac)
-* Rename the t.tsv and put the tsv file into data/MAPS/tsv/matched (for example a.tsv)
-* run evaluate.py 
-```bash
-python3 evaluate.py model.pt --save-path output/ 
-```
-* The result a.mid is placed in output/
+Music Transport by deep learing.
 ### Convert WAV or MP3 file into MIDI By interface(Update)
+* support map & wav format file.
+* the transfer interface is located in wav2mid.py.
+* Convert wav or Mp3 file into MIDI by transfer() directly.
+* audio_path represent input file's path.
+* save_path represent output file's path anywhere you want.
+* you must put model file in ./
 ```py
 def transfer(audio_path, save_path):
     return midi_path
